@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+
+       <androidx.core.widget.NestedScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+              <LinearLayout
+                  android:id="@+id/linearLayout3"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent">
+
+                     <TextView
+                         android:id="@+id/hellouser"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:layout_marginTop="10dp"
+                         android:text="Xin chào!! " />
+
+                     <androidx.cardview.widget.CardView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="20dp"
+                         android:layout_marginTop="20dp"
+                         android:layout_marginRight="20dp"
+                         app:cardCornerRadius="30dp"
+                         app:cardElevation="10dp"
+                         app:layout_constraintEnd_toStartOf="@+id/cardView"
+                         app:layout_constraintStart_toStartOf="parent"
+                         app:layout_constraintTop_toTopOf="parent">
+
+                            <SearchView
+                                android:id="@+id/search_bar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:iconifiedByDefault="false"
+                                android:queryHint="Tìm kiếm..."
+                                app:closeIcon="@android:drawable/ic_menu_close_clear_cancel"
+                                app:queryBackground="@android:color/transparent"
+                                app:searchHintIcon="@android:drawable/ic_menu_search"
+                                app:searchIcon="@android:drawable/ic_menu_search" />
+                     </androidx.cardview.widget.CardView>
+
+                     <TextView
+                         android:id="@+id/textView5"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:layout_marginTop="5dp"
+                         android:text="Danh mục"
+                         android:textSize="16sp"
+                         android:textStyle="bold" />
+
+                     <androidx.recyclerview.widget.RecyclerView
+                         android:id="@+id/recycler_category"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp" />
+
+                     <TextView
+                         android:id="@+id/textView10"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:layout_marginTop="5dp"
+                         android:text="TOP sản phẩm bán chạy nhất"
+                         android:textSize="16sp"
+                         android:textStyle="bold" />
+
+                     <androidx.recyclerview.widget.RecyclerView
+                         android:id="@+id/recycler_popular"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp" />
+
+                     <TextView
+                         android:id="@+id/textView6"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:layout_marginTop="5dp"
+                         android:text="Sản phẩm"
+                         android:textSize="16sp"
+                         android:textStyle="bold" />
+
+                     <androidx.recyclerview.widget.RecyclerView
+                         android:id="@+id/recycler_allproduct"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:nestedScrollingEnabled="false"/>
+
+              </LinearLayout>
+       </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
